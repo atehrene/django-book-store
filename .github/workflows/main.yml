@@ -48,5 +48,5 @@ jobs:
           key: ${{ secrets.KEY }}
           script: |
             cd /home/ubuntu/django-book-store
-            docker-compose down
+            docker-compose down --rmi all
             docker-compose up -d
