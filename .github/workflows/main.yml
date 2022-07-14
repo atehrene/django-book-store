@@ -24,7 +24,7 @@ jobs:
           push: true
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/django-book-store:latest
   Deploy-on-AWS:
-      needs: Build
+      needs: build-Docker-Image
       runs-on: ubuntu-latest
       steps:
       - name: Checkout 
