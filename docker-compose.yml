@@ -30,6 +30,7 @@ services:
       volumes:
           - ./data:/data
           - ./data/misc/django_init.sql:/docker-entrypoint-initdb.d/1-django-init.sql
+          - db-data:/var/lib/postgresql/data
   pgadmin:
       container_name: pgadmin_container
       image: dpage/pgadmin4:5.2
@@ -44,3 +45,5 @@ services:
           - "5433:5433"
       depends_on:
           - pg
+volumes:
+ db-data:
