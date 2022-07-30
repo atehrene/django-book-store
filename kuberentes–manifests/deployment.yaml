@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: book-store
+  labels:
+    app: book-store
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: book-store
+  template:
+    metadata:
+      labels:
+        app: book-store
+    spec:
+      containers:
+        - name: book-store
+          image: ahmedmohamed1101140/django-book-store:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8000
+          env:
+            - name: DB_HOST
+              value: "amboostore-server.postgres.database.azure.com"
+            - name: DB_USER
+              value: "tenuouseagle6"
+            - name: DB_PASSWORD
+              value: "7RYaH4MLn4AwUDU6zUsfkQ"
+            - name: DB_NAME
+              value: "book_store_db"
+            - name: DB_PORT
+              value: "5432"
