@@ -11,12 +11,12 @@ Requirments:
 
 To Run the application 
 ```
-docker compose up -d
-docker compose exec web python manage.py makemigrations --noinput
-docker compose exec web python manage.py migrate --noinput
+docker-compose up -d
+docker-compose exec web python manage.py makemigrations --noinput
+docker-compose exec web python manage.py migrate --noinput
 ```
 
 To Stop the application
 ```
-docker compose down
+docker-compose down
 ```
