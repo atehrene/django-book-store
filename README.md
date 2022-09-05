@@ -9,7 +9,7 @@ Requirments:
 2- Insomnia
 
 
-To Run the application 
+To Run the application use the below commands
 ```
 docker-compose up -d
 docker-compose exec web python manage.py makemigrations --noinput
