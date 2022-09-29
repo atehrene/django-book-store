@@ -4,7 +4,7 @@ This is a sample django project to create a Book store Rest API to perform the C
 
 Requirments:
 
-1- Docker
+1- Docker Needed
 
 2- Insomnia
 
